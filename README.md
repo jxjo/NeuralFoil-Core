@@ -22,6 +22,29 @@ This repository targets a slim, practical core for integration use cases (such a
 
 In short: keep the useful core, strip non-essential layers.
 
+## Quick Example
+
+The repository includes a runnable showcase script at [example.py](example.py).
+
+What it demonstrates:
+
+- builds a lightweight airfoil object from embedded coordinates
+- fits CST/Kulfan parameters with [fit_cst](neuralfoil/cst.py)
+- evaluates a polar through [get_aero_from_kulfan_parameters](neuralfoil/core_api.py)
+- prints a formatted table of alpha, CL, CD, and CM
+
+Run it from the repository root:
+
+```bash
+python example.py
+```
+
+Current script setup:
+
+- alpha sweep from -3.0 to 13.0 deg in 0.5 deg steps
+- Reynolds number: 600000
+- Ncrit: 9.0
+
 
 ## License and Attribution
 
